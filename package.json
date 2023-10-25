@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "scss": "sass --watch ./src/styles/global.scss build/output.css",
+    "scss": "sass --watch ./src/styles/global.scss dist/global.css",
     "start": "tsc --watch"
   },
   "keywords": [],
