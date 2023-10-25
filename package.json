@@ -1,0 +1,20 @@
+{
+  "name": "boardgame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "scss": "sass --watch ./src/styles/global.scss build/output.css",
+    "start": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "Damian Radecki",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

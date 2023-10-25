@@ -1,0 +1,91 @@
+@import './animations';
+
+.dice {
+  padding: 4px;
+  background-color: tomato;
+  width: 104px;
+  height: 104px;
+  border-radius: 10%;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  display: none;
+  cursor: pointer;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-50%);
+}
+.active-dice {
+  opacity: 1;
+  animation: RollDice 0.2s ease-in-out both;
+  pointer-events: all;
+  z-index: 99;
+}
+.blocked-dice {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: grey;
+
+  z-index: 99;
+}
+.dice-dot {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+}
+.dice-1,
+.dice-2,
+.dice-3 {
+  display: flex;
+}
+.dice-1 {
+  justify-content: center;
+  align-items: center;
+}
+.dice-2 {
+  justify-content: space-between;
+  .dot-2 {
+    align-self: flex-end;
+  }
+}
+.dice-3 {
+  justify-content: space-between;
+  align-items: center;
+  .dot-1 {
+    align-self: flex-end;
+  }
+  .dot-3 {
+    align-self: flex-start;
+  }
+}
+.dice-4,
+.dice-5,
+.dice-6 {
+  display: flex;
+  justify-content: space-between;
+}
+.dice-4,
+.dice-6 {
+  align-items: center;
+  flex-wrap: wrap;
+  .dice-dot {
+    margin: 0 6px;
+  }
+}
+.dice-5 {
+  align-items: center;
+  flex-wrap: wrap;
+  .dice-dot {
+    margin: 0 6px;
+  }
+  .dot-5 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
