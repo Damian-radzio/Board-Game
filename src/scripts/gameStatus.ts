@@ -60,6 +60,7 @@ export const handleShowGameStatus = (
       firstField?.classList.add('jumpedOn');
       instruction.classList.remove('hidden');
       dices.forEach((dice) => dice.classList.remove('hidden'));
+
       document.body.classList.remove(boardValues.bodyClassName);
 
       gameInfo?.removeChild(gameInfoText);
