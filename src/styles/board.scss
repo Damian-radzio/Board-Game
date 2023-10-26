@@ -54,7 +54,7 @@
 }
 
 .jumpedOn {
-  animation: jumpedOn 0.2s ease-in-out both;
+  animation: jumped-on 0.2s ease-in-out both;
   &::after {
     content: '';
     position: absolute;

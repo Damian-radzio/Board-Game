@@ -20,7 +20,7 @@ const handleBlockDice = (): void => {
 
 export const handleRollDice = (): number => {
   setDrawnNumber(generatePointOfDice(1, maxPointOfDice));
-  handleBlockDice();
+  handleBlockDice(); 
   setTimeout(() => {
     handleMovePawn();
   }, 500);
