@@ -34,16 +34,9 @@ export const findActiveDice = () => {
   const firstField = document.getElementById('field-1');
   firstField?.classList.add('first-field', 'active-field', 'jumpedOn');
 
-  const startImage = document.createElement('img');
-  startImage.src = '../../dist/assets/images/start.png';
-  firstField?.appendChild(startImage);
-
   const lastField = document.getElementById(
     `field-${numberOfBoardFields.toString()}`
   );
-  const finishImage = document.createElement('img');
-  finishImage.src = '../../dist/assets/images/finish.png';
-  lastField?.appendChild(finishImage);
   lastField?.classList.add('last-field');
 
   const specialFields = [
@@ -52,9 +45,6 @@ export const findActiveDice = () => {
   ];
   specialFields.map((field) => {
     field?.classList.add('special-field');
-    const warningImg = document.createElement('img');
-    warningImg.src = '../../dist/assets/images/warning.png';
-    field?.appendChild(warningImg);
   });
 
   for (let i = 1; i <= maxPointOfDice; i++) {

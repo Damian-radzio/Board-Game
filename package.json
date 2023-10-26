@@ -6,8 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "copy": "copyfiles *.png -u 2 src/images/*.png dist/assets/images",
-    "build": "tsc && vite build && npm run copy",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "keywords": [],
