@@ -13,6 +13,7 @@
   "author": "Damian Radecki",
   "license": "ISC",
   "devDependencies": {
+    "sass": "^1.69.5",
     "typescript": "^5.0.2",
     "vite": "^4.4.8"
   },
