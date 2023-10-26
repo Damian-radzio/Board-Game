@@ -1,11 +1,13 @@
 @import './animations';
 #board {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1440px;
   margin: 48px auto;
+  gap: 12px;
 }
 .board-field {
   padding: 2px;
@@ -21,19 +23,11 @@
   }
 }
 
-.first-field {
-  margin-right: 12px;
-  width: 70px;
-  height: 70px;
-}
+.first-field,
 .last-field {
-  margin-left: 12px;
-  width: 70px;
-  height: 70px;
-}
-.special-field {
-  width: 65px;
-  height: 65px;
+  margin-right: 12px;
+  width: 80px;
+  height: 80px;
 }
 
 .special-field,
@@ -54,7 +48,7 @@
 }
 
 .jumpedOn {
-  animation: jumpedOn 0.2s ease-in-out both;
+  animation: jumped-on 0.2s ease-in-out both;
   &::after {
     content: '';
     position: absolute;

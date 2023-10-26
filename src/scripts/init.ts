@@ -1,17 +1,24 @@
-import { handleRollDice } from './dice.js';
+import { handleRollDice } from './dice';
 
+export const minPointOfDice: number = 1;
 export const maxPointOfDice: number = 6;
 export const numberOfBoardFields: number = 20;
 export const diceList: Array<HTMLElement> = [];
 export const boardFieldsList: Array<HTMLElement> = [];
 export const instruction = document.createElement('div');
 
+export const findActiveDice = () => {
+  const activeDice = diceList.find((dice) =>
+    dice.className.includes('active-dice')
+  );
+  return activeDice;
+};
+
 (function () {
   const board = document.getElementById('board');
-  let field = document.createElement('div');
 
   for (let i = 1; i <= numberOfBoardFields; i++) {
-    field = document.createElement('div');
+    const field = document.createElement('div');
     field.classList.add('board-field');
     field.id = `field-${i}`;
     board?.appendChild(field);
@@ -39,7 +46,6 @@ export const instruction = document.createElement('div');
   lastField?.appendChild(finishImage);
   lastField?.classList.add('last-field');
 
-  // special fields
   const specialFields = [
     document.getElementById('field-12'),
     document.getElementById('field-19'),
@@ -66,10 +72,10 @@ export const instruction = document.createElement('div');
 
   instruction.innerHTML = `
     <h2>INSTRUKCJA</h2>
-    <p>1. Uwazaj na pole 12! Wejdziesz? Przegrywasz!</p>
-    <p>2. Uwazaj na pole 19! Wejdziesz? Cofasz się do pola o numerze 11!</p>
-    <p>3. Gra kończy się wejściem na pole 20</p>
-    <p>4. Uwaga! Jeśli przekroczysz pole mety cofasz się z niej o tyle pól o ile ją przekroczyłeś!</p>
+    <p>1. Uważaj na pole 12! Wejdziesz? Przegrywasz!</p>
+    <p>2. Uważaj na pole 19! Wejdziesz? Cofasz się do pola o numerze 11!</p>
+    <p>3. Gra kończy się wygraną poprzez wejście na pole 20.</p>
+    <p>4. UWAGA! Jeśli przekroczysz pole mety cofasz się z niej o tyle pól o ile ją przekroczyłeś.</p>
   `;
 
   instruction.classList.add('instruction');
@@ -77,6 +83,7 @@ export const instruction = document.createElement('div');
 
   const gameInfo = document.createElement('div');
   gameInfo.classList.add('game-info');
+
   document.body.appendChild(gameInfo);
 })();
 

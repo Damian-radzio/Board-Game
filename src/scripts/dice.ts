@@ -4,7 +4,7 @@ import { generatePointOfDice } from './helpers/index.js';
 import { diceList, maxPointOfDice } from './init.js';
 import { handleMovePawn } from './board.js';
 
-const handleBlockDice = (): void => {
+export const handleBlockDiceOnJump = (): void => {
   diceList.forEach((el) => el.classList.remove('active-dice'));
   setTimeout(() => {
     diceList.map((dice) => {
@@ -20,7 +20,8 @@ const handleBlockDice = (): void => {
 
 export const handleRollDice = (): number => {
   setDrawnNumber(generatePointOfDice(1, maxPointOfDice));
-  handleBlockDice();
+
+  handleBlockDiceOnJump();
   setTimeout(() => {
     handleMovePawn();
   }, 500);

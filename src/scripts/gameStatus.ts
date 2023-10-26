@@ -1,10 +1,6 @@
 import { drawnNumber, setActiveField } from './variables.js';
 import { boardFieldsList, instruction } from './init.js';
-import {
-  GameBoardStatusType,
-  GameStatsType,
-  GameStatusTypes,
-} from './types/index.js';
+import { GameBoardStatusType, GameStatsType } from './types/index.js';
 
 export const gameStats: GameStatsType = {
   totalNumberOfStitches: 0,
@@ -28,7 +24,6 @@ export const updateGameStats = () => {
 };
 
 export const handleShowGameStatus = (
-  gameStatus: GameStatusTypes,
   boardValues: GameBoardStatusType
 ): void => {
   const restartGameBtn = document.createElement('button');
@@ -65,11 +60,15 @@ export const handleShowGameStatus = (
       firstField?.classList.add('jumpedOn');
       instruction.classList.remove('hidden');
       dices.forEach((dice) => dice.classList.remove('hidden'));
+
       document.body.classList.remove(boardValues.bodyClassName);
 
       gameInfo?.removeChild(gameInfoText);
       gameInfo?.removeChild(restartGameBtn);
       gameInfo?.removeChild(gameInfoStats);
+
+      gameStats.totalNumberOfStitches = 0;
+      gameStats.totalNumberOfThrows = 0;
 
       setActiveField(1);
       restartGameBtn.removeEventListener('click', handleResetGame, true);
