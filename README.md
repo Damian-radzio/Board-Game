@@ -11,8 +11,8 @@ Then open the terminal in the project directory, and install dependencies with:
 ```
 npm install
 ```
-Then run app on port 3000 using:
+To run app use: 
 ```
-npm start
+npm run dev
 ```
 
