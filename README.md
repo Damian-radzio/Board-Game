@@ -1,5 +1,6 @@
 # BOARD GAME 
-## You can try demo on: https://app.netlify.com/sites/roaring-vacherin-e563fc/overview
+## You can try demo on: https://board-game-damian-radecki.netlify.app
+
 ## Setup 
 
 Get the code by either cloning this repository using git
