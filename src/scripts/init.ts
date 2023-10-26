@@ -8,10 +8,10 @@ export const instruction = document.createElement('div');
 
 (function () {
   const board = document.getElementById('board');
-  let field = document.createElement('div');
 
   for (let i = 1; i <= numberOfBoardFields; i++) {
-    field = document.createElement('div');
+    const field = document.createElement('div');
+    // field = document.createElement('div');
     field.classList.add('board-field');
     field.id = `field-${i}`;
     board?.appendChild(field);

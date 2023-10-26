@@ -5,18 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-        "start": "npm run open && npm run tsc && npm run sass",
-    "sass": "sass --watch ./src/styles/global.scss dist/global.css",
-    "tsc": "tsc --watch ",
-    "open": "concurrently \"http-server -a localhost -p 3000\" \"open http://localhost:3000/\""
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "Damian Radecki",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.2",
-    "http-server": "^14.1.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.0.2",
+    "vite": "^4.4.8"
   },
   "dependencies": {
     "node-sass": "^9.0.0"

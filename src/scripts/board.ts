@@ -1,5 +1,3 @@
-import { GameStatusTypes } from './types/index.js';
-
 import { numberOfBoardFields, diceList, boardFieldsList } from './init.js';
 import {
   gameBoardStatusDEFEAT,
@@ -24,10 +22,10 @@ const checkSpecialFields = (): void => {
       bodyWarningAlarm();
 
       setTimeout(() => {
-        handleShowGameStatus(GameStatusTypes.DEFEAT, gameBoardStatusDEFEAT);
+        handleShowGameStatus(gameBoardStatusDEFEAT);
       }, 2000);
     } else if (activeField === 20) {
-      handleShowGameStatus(GameStatusTypes.WIN, gameBoardStatusWIN);
+      handleShowGameStatus(gameBoardStatusWIN);
     } else if (activeField === 19) {
       bodyWarningAlarm();
 
