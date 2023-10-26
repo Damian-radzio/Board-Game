@@ -6,13 +6,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "copy": "copyfiles *.png -u 2 src/images/*.png dist/assets/images",
+    "build": "tsc && vite build && npm run copy",
     "preview": "vite preview"
   },
   "keywords": [],
   "author": "Damian Radecki",
   "license": "ISC",
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "sass": "^1.69.5",
     "typescript": "^5.0.2",
     "vite": "^4.4.8"

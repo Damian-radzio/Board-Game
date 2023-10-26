@@ -1,7 +1,5 @@
 import { handleRollDice } from './dice';
-import StartPNG from '../images/start.png';
-import FinishPNG from '../images/finish.png';
-import WarningPNG from '../images/warning.png';
+
 export const minPointOfDice: number = 1;
 export const maxPointOfDice: number = 6;
 export const numberOfBoardFields: number = 20;
@@ -37,14 +35,14 @@ export const findActiveDice = () => {
   firstField?.classList.add('first-field', 'active-field', 'jumpedOn');
 
   const startImage = document.createElement('img');
-  startImage.src = StartPNG;
+  startImage.src = 'dist/assets/images/start.png';
   firstField?.appendChild(startImage);
 
   const lastField = document.getElementById(
     `field-${numberOfBoardFields.toString()}`
   );
   const finishImage = document.createElement('img');
-  finishImage.src = FinishPNG;
+  finishImage.src = 'dist/assets/images/finish.png';
   lastField?.appendChild(finishImage);
   lastField?.classList.add('last-field');
 
@@ -55,7 +53,7 @@ export const findActiveDice = () => {
   specialFields.map((field) => {
     field?.classList.add('special-field');
     const warningImg = document.createElement('img');
-    warningImg.src = WarningPNG;
+    warningImg.src = 'dist/assets/images/warning.png';
     field?.appendChild(warningImg);
   });
 
