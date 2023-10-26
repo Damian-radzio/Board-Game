@@ -14,13 +14,8 @@ Then open the terminal in the project directory, and install dependencies with:
 npm install
 ```
 
-Then start the typescript watching with:
-
+Then run app on port 3000 using:
 ```
 npm start
 ```
-After that run sass watch using:
 
-```
-npm run scss
-```
